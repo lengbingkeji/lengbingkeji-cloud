@@ -12,6 +12,7 @@
     <modules>
         <module>lbkj-common</module>
         <module>lbkj-item-service</module>
+        <module>lbkj-cart-service</module>
     </modules>
 
     <parent>
