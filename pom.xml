@@ -7,9 +7,11 @@
     <groupId>com.lengbingkeji.cloud</groupId>
     <artifactId>lengbingkeji-cloud</artifactId>
     <packaging>pom</packaging>
+    <version>1.0.0</version>
     <name>LENGBINGKEJI CLOUD ${project.version}</name>
     <modules>
         <module>lbkj-common</module>
+        <module>lbkj-item-service</module>
     </modules>
 
     <parent>
