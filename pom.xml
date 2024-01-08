@@ -8,6 +8,9 @@
     <artifactId>lengbingkeji-cloud</artifactId>
     <packaging>pom</packaging>
     <name>LENGBINGKEJI CLOUD ${project.version}</name>
+    <modules>
+        <module>lbkj-common</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
