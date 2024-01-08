@@ -25,9 +25,9 @@
         <spring-boot.version>3.0.2</spring-boot.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
         <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
-        <mybatis-plus.version>3.5.5</mybatis-plus.version>
-        <hutool.version>5.8.23</hutool.version>
-        <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <hutool.version>5.8.24</hutool.version>
+        <mysql-connector-java.version>8.0.30</mysql-connector-java.version>
     </properties>
 
     <!-- 对依赖包进行管理 -->
