@@ -2,7 +2,9 @@ server:
   port: 8082
 spring:
   application:
-    name: lbkj-cart-service
+    #name: lbkj-cart-service
+    name: LBKJ-CART-SERVICE
+
   datasource:
     url: jdbc:mysql://127.0.0.1:3307/lbkj_cart_service?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     username: root
