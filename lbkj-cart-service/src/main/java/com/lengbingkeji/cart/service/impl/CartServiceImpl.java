@@ -9,6 +9,7 @@ import com.lengbingkeji.cart.domain.dto.CartFormDTO;
 import com.lengbingkeji.cart.domain.dto.ItemDTO;
 import com.lengbingkeji.cart.domain.po.Cart;
 import com.lengbingkeji.cart.domain.vo.CartVO;
+import com.lengbingkeji.cart.feignclient.ItemClient;
 import com.lengbingkeji.cart.mapper.CartMapper;
 import com.lengbingkeji.cart.service.ICartService;
 import com.lengbingkeji.common.exception.BizIllegalException;
@@ -48,7 +49,9 @@ import java.util.stream.Collectors;
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
     //private final IItemService itemService;
-    private final DiscoveryClient discoveryClient;
+    //private final DiscoveryClient discoveryClient;
+    //导入接口
+    private final ItemClient itemClient;
 
     //网络请求：第二步
     // 方式一：
@@ -111,7 +114,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         Set<Long> itemIds = vos.stream().map(CartVO::getItemId).collect(Collectors.toSet());
         // 2.查询商品
         //List<ItemDTO> items = itemService.queryItemByIds(itemIds);
-
+/*
         //以下是通过nacos获取服务新添加的代码：start
         //2.1、根据服务名称获取服务的实例列表
         List<ServiceInstance> instances = discoveryClient.getInstances("LBKJ-ITEM-SERVICE");
@@ -143,7 +146,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
             return;
         }
         List<ItemDTO> items = response.getBody();
-
+*/
+        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
         if (CollUtils.isEmpty(items)) {
             return;
         }

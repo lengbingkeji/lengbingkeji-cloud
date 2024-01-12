@@ -3,6 +3,7 @@ package com.lengbingkeji.cart;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,6 +16,7 @@ import org.springframework.web.client.RestTemplate;
  * @Create 2024/1/8 16:43
  * @Version 1.0
  */
+@EnableFeignClients
 @MapperScan("com.lengbingkeji.cart.mapper")
 @SpringBootApplication
 public class CartServiceApplication {
