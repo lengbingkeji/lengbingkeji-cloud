@@ -40,3 +40,8 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.lengbingkeji.cart.controller
+
+#OpenFeign连接池:okhttp
+feign:
+  okhttp:
+    enabled: true
