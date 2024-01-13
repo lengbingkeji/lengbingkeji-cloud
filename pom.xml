@@ -16,6 +16,7 @@
         <module>lbkj-api</module>
         <module>lbkj-user-service</module>
         <module>lbkj-trade-service</module>
+        <module>lbkj-pay-service</module>
     </modules>
 
     <parent>
