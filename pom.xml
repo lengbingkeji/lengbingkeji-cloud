@@ -13,6 +13,7 @@
         <module>lbkj-common</module>
         <module>lbkj-item-service</module>
         <module>lbkj-cart-service</module>
+        <module>lbkj-api</module>
     </modules>
 
     <parent>

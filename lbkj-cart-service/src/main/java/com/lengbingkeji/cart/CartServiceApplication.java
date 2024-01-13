@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
  * @Create 2024/1/8 16:43
  * @Version 1.0
  */
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.lengbingkeji.api.feignclient")
 @MapperScan("com.lengbingkeji.cart.mapper")
 @SpringBootApplication
 public class CartServiceApplication {
