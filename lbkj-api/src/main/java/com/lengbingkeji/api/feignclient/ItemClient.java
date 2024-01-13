@@ -1,5 +1,6 @@
 package com.lengbingkeji.api.feignclient;
 
+import com.lengbingkeji.api.config.DefaultFeignConfig;
 import com.lengbingkeji.api.dto.ItemDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,7 @@ import java.util.List;
  * @Version 1.0
  */
 @FeignClient("LBKJ-ITEM-SERVICE")
+//@FeignClient(value = "LBKJ-ITEM-SERVICE", configuration = DefaultFeignConfig.class)
 public interface ItemClient {
     @GetMapping("/items")
     List<ItemDTO> queryItemByIds(@RequestParam("ids") Collection<Long> ids);
