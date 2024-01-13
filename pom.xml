@@ -15,6 +15,7 @@
         <module>lbkj-cart-service</module>
         <module>lbkj-api</module>
         <module>lbkj-user-service</module>
+        <module>lbkj-trade-service</module>
     </modules>
 
     <parent>

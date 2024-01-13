@@ -1,8 +1,8 @@
 package com.lengbingkeji.item.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.lengbingkeji.item.domain.dto.ItemDTO;
-import com.lengbingkeji.item.domain.dto.OrderDetailDTO;
+import com.lengbingkeji.api.dto.ItemDTO;
+import com.lengbingkeji.api.dto.OrderDetailDTO;
 import com.lengbingkeji.item.domain.po.Item;
 
 import java.util.Collection;

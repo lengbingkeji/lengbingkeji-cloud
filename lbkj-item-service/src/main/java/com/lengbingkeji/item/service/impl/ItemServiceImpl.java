@@ -1,10 +1,10 @@
 package com.lengbingkeji.item.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.lengbingkeji.api.dto.ItemDTO;
+import com.lengbingkeji.api.dto.OrderDetailDTO;
 import com.lengbingkeji.common.exception.BizIllegalException;
 import com.lengbingkeji.common.utils.BeanUtils;
-import com.lengbingkeji.item.domain.dto.ItemDTO;
-import com.lengbingkeji.item.domain.dto.OrderDetailDTO;
 import com.lengbingkeji.item.domain.po.Item;
 import com.lengbingkeji.item.mapper.ItemMapper;
 import com.lengbingkeji.item.service.IItemService;

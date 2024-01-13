@@ -1,7 +1,7 @@
 package com.lengbingkeji.item.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.lengbingkeji.item.domain.dto.OrderDetailDTO;
+import com.lengbingkeji.api.dto.OrderDetailDTO;
 import com.lengbingkeji.item.domain.po.Item;
 import org.apache.ibatis.annotations.Update;
 
