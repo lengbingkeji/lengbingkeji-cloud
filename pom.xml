@@ -14,6 +14,7 @@
         <module>lbkj-item-service</module>
         <module>lbkj-cart-service</module>
         <module>lbkj-api</module>
+        <module>lbkj-user-service</module>
     </modules>
 
     <parent>

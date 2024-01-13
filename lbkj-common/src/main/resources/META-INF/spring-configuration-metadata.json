@@ -11,8 +11,8 @@
     },
     {
       "name": "hm.jwt",
-      "type": "com.hmall.config.SecurityConfig",
-      "sourceType": "com.hmall.config.JwtProperties"
+      "type": "com.lengbingkeji.user.config.SecurityConfig",
+      "sourceType": "com.lengbingkeji.user.config.JwtProperties"
     },
     {
       "name": "hm.auth",
