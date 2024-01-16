@@ -36,6 +36,8 @@ spring:
             - Path=/pay-orders/**
       default-filters:
         - AddRequestHeader=lengbingkejifilters-default,lbkjfilters-default
+        #- LbkjPrintAny
+        - LbkjPrintAny=1,2,3
 
 logging:
   level:
