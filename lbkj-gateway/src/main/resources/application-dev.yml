@@ -11,6 +11,9 @@ spring:
           uri: lb://LBKJ-ITEM-SERVICE # 路由的目标服务，lb代表负载均衡，会从注册中心拉取服务列表
           predicates: # 路由断言，判断当前请求是否符合当前规则，符合则路由到目标服务
             - Path=/items/**,/search/** # 这里是以请求路径作为判断规则
+          filters:    #添加路由过滤器：过滤器名=过滤器值
+            #- AddRequestHeader=X-Request-Red, Blue-{segment}
+            - AddRequestHeader=lengbingkejifilters,lbkjfilters
 
         - id: lbkj-cart-service
           uri: lb://LBKJ-CART-SERVICE
@@ -31,6 +34,8 @@ spring:
           uri: lb://LBKJ-PAY-SERVICE
           predicates:
             - Path=/pay-orders/**
+      default-filters:
+        - AddRequestHeader=lengbingkejifilters-default,lbkjfilters-default
 
 logging:
   level:

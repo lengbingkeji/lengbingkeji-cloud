@@ -34,7 +34,14 @@ public class ItemController {
 
     @ApiOperation("分页查询商品")
     @GetMapping("/page")
-    public PageDTO<ItemDTO> queryItemByPage(PageQuery query) {
+    public PageDTO<ItemDTO> queryItemByPage(
+            PageQuery query,
+            @RequestHeader(value = "lengbingkejifilters",required = false) String lengbingkejifilters,
+            @RequestHeader(value = "lengbingkejifilters-default",required = false) String lengbingkejifiltersDefault
+        ) {
+        //输出网关服务添加过滤器的请求头
+        System.out.println("lengbingkejifilters = " + lengbingkejifilters);
+        System.out.println("lengbingkejifilters-default = " + lengbingkejifiltersDefault);
         // 1.分页查询
         Page<Item> result = itemService.page(query.toMpPage("update_time", false));
         // 2.封装并返回
