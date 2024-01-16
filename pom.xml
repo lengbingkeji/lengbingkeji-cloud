@@ -17,6 +17,7 @@
         <module>lbkj-user-service</module>
         <module>lbkj-trade-service</module>
         <module>lbkj-pay-service</module>
+        <module>lbkj-gateway</module>
     </modules>
 
     <parent>
@@ -35,7 +36,7 @@
         <spring-boot.version>2.7.12</spring-boot.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
-        <mybatis-plus.version>3.4.3</mybatis-plus.version>
+        <mybatis-plus.version>3.5.4</mybatis-plus.version>
         <hutool.version>5.8.11</hutool.version>
         <mysql-connector-java.version>8.0.23</mysql-connector-java.version>
     </properties>
