@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Create 2024/1/15 16:38
  * @Version 1.0
  */
+
 @SpringBootApplication
 public class GatewayServiceApplication {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.lengbingkeji.user.utils;
+package com.lengbingkeji.gateway.util;
 
 import cn.hutool.core.exceptions.ValidateException;
 import cn.hutool.jwt.JWT;
@@ -14,11 +14,11 @@ import java.util.Date;
 
 /**
  * ClassName: JwtTool
- * Package: com.lengbingkeji.user.utils
+ * Package: com.lengbingkeji.gateway.util
  * Description:
  *
  * @Author lengbingkeji
- * @Create 2024/1/13 12:17
+ * @Create 2024/1/17 10:44
  * @Version 1.0
  */
 @Component
@@ -32,7 +32,7 @@ public class JwtTool {
     /**
      * 创建 access-token
      *
-     * @param userId
+     * @param userId 用户信息
      * @return access-token
      */
     public String createToken(Long userId, Duration ttl) {
