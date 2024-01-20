@@ -1,5 +1,5 @@
 spring:
   profiles:
     active: dev
-#  application:
-#    name: LBKJ-GATEWAY-SERVICE
+  application:
+    name: LBKJ-GATEWAY-SERVICE

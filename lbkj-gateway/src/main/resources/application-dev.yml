@@ -1,51 +1,51 @@
 server:
   port: 8080
-spring:
-  application:
-    #name: lbkj-gateway-service
-    name: LBKJ-GATEWAY-SERVICE
-  cloud:
-    gateway:
-      routes:
-        - id: lbkj-item-service # 路由规则id，自定义，唯一
-          uri: lb://LBKJ-ITEM-SERVICE # 路由的目标服务，lb代表负载均衡，会从注册中心拉取服务列表
-          predicates: # 路由断言，判断当前请求是否符合当前规则，符合则路由到目标服务
-            - Path=/items/**,/search/** # 这里是以请求路径作为判断规则
-          filters:    #添加路由过滤器：过滤器名=过滤器值
-            #- AddRequestHeader=X-Request-Red, Blue-{segment}
-            - AddRequestHeader=lengbingkejifilters,lbkjfilters
+#spring:
+##  application:
+##    #name: lbkj-gateway-service
+##    name: LBKJ-GATEWAY-SERVICE
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: lbkj-item-service # 路由规则id，自定义，唯一
+#          uri: lb://LBKJ-ITEM-SERVICE # 路由的目标服务，lb代表负载均衡，会从注册中心拉取服务列表
+#          predicates: # 路由断言，判断当前请求是否符合当前规则，符合则路由到目标服务
+#            - Path=/items/**,/search/** # 这里是以请求路径作为判断规则
+#          filters:    #添加路由过滤器：过滤器名=过滤器值
+#            #- AddRequestHeader=X-Request-Red, Blue-{segment}
+#            - AddRequestHeader=lengbingkejifilters,lbkjfilters
+#
+#        - id: lbkj-cart-service
+#          uri: lb://LBKJ-CART-SERVICE
+#          predicates:
+#            - Path=/carts/**
+#
+#        - id: lbkj-user-service
+#          uri: lb://LBKJ-USER-SERVICE
+#          predicates:
+#            - Path=/users/**,/addresses/**
+#
+#        - id: lbkj-trade-service
+#          uri: lb://LBKJ-TRADE-SERVICE
+#          predicates:
+#            - Path=/orders/**
+#
+#        - id: lbkj-pay-service
+#          uri: lb://LBKJ-PAY-SERVICE
+#          predicates:
+#            - Path=/pay-orders/**
+#      default-filters:
+#        - AddRequestHeader=lengbingkejifilters-default,lbkjfilters-default
+#        #- LbkjPrintAny
+#        - LbkjPrintAny=1,2,3
 
-        - id: lbkj-cart-service
-          uri: lb://LBKJ-CART-SERVICE
-          predicates:
-            - Path=/carts/**
-
-        - id: lbkj-user-service
-          uri: lb://LBKJ-USER-SERVICE
-          predicates:
-            - Path=/users/**,/addresses/**
-
-        - id: lbkj-trade-service
-          uri: lb://LBKJ-TRADE-SERVICE
-          predicates:
-            - Path=/orders/**
-
-        - id: lbkj-pay-service
-          uri: lb://LBKJ-PAY-SERVICE
-          predicates:
-            - Path=/pay-orders/**
-      default-filters:
-        - AddRequestHeader=lengbingkejifilters-default,lbkjfilters-default
-        #- LbkjPrintAny
-        - LbkjPrintAny=1,2,3
-
-logging:
-  level:
-    com.lengbingkeji: debug
-  pattern:
-    dateformat: YYYY-MM-DD HH:mm:ss:SSS
-  file:
-    path: "logs/${spring.application.name}"
+#logging:
+#  level:
+#    com.lengbingkeji: debug
+#  pattern:
+#    dateformat: YYYY-MM-DD HH:mm:ss:SSS
+#  file:
+#    path: "logs/${spring.application.name}"
 
 #knife4j:
 #  enable: true
@@ -65,12 +65,12 @@ logging:
 
 hm:
   jwt:
-    location: classpath:hmall.jks
-    alias: hmall
-    password: hmall123
-    tokenTTL: 30m
+    location: classpath:hmall.jks    #秘钥地址
+    alias: hmall    # 秘钥别名
+    password: hmall123    # 秘钥文件密码
+    tokenTTL: 30m    # 登录有效期
   auth:
-    excludePaths:
+    excludePaths:     # 无需登录校验的路径
       - /search/**
       - /users/login
       - /items/**
