@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lengbingkeji.api.dto.ItemDTO;
 import com.lengbingkeji.api.feignclient.ItemClient;
+import com.lengbingkeji.cart.config.CartProperties;
 import com.lengbingkeji.cart.domain.dto.CartFormDTO;
 import com.lengbingkeji.cart.domain.po.Cart;
 import com.lengbingkeji.cart.domain.vo.CartVO;
@@ -52,6 +53,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     //private final DiscoveryClient discoveryClient;
     //导入接口
     private final ItemClient itemClient;
+
+    private final CartProperties cartProperties;
 
     //网络请求：第二步
     // 方式一：
@@ -178,8 +181,11 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     private void checkCartsFull(Long userId) {
         Long count = lambdaQuery().eq(Cart::getUserId, userId).count();
-        if (count >= 10) {
-            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", 10));
+//        if (count >= 10) {
+//            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", 10));
+//        }
+        if (count >= cartProperties.getMaxAmount()) {
+            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", cartProperties.getMaxAmount()));
         }
     }
 
