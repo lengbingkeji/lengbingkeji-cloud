@@ -18,6 +18,13 @@
     </properties>
 
     <dependencies>
+        <!-- lbkj-common模块 -->
+        <dependency>
+            <groupId>com.lengbingkeji.cloud</groupId>
+            <artifactId>lbkj-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <!-- openFeign -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
