@@ -56,8 +56,8 @@ lbkj:
     password: lengbing_mysql
 
   swagger:
-    title: lbkj-cart-service购物车接口文档
-    description: lbkj-cart-service购物车接口文档
+    title: lbkj-cart-service（购物车）接口文档
+    description: lbkj-cart-service（购物车）接口文档
     email: 1517699467@qq.com
     concat: 冷冰科技
     package: com.lengbingkeji.cart.controller
