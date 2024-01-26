@@ -1,5 +1,12 @@
 server:
   port: 8082
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true   #开启请求方式前缀
 #spring:
 #  #application:
 #    #name: lbkj-cart-service
@@ -61,3 +68,4 @@ lbkj:
     email: 1517699467@qq.com
     concat: 冷冰科技
     package: com.lengbingkeji.cart.controller
+
