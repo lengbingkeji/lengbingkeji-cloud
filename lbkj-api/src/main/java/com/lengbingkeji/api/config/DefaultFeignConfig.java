@@ -1,5 +1,6 @@
 package com.lengbingkeji.api.config;
 
+import com.lengbingkeji.api.feignclient.fallback.ItemClientFallback;
 import com.lengbingkeji.common.utils.UserContext;
 import feign.Logger;
 import feign.RequestInterceptor;
@@ -33,5 +34,11 @@ public class DefaultFeignConfig {
                 }
             }
         };
+    }
+
+    //降级处理类ItemClientFallback
+    @Bean
+    public ItemClientFallback itemClientFallback(){
+        return new ItemClientFallback();
     }
 }

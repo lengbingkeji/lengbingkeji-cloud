@@ -3,6 +3,7 @@ package com.lengbingkeji.api.feignclient;
 import com.lengbingkeji.api.config.DefaultFeignConfig;
 import com.lengbingkeji.api.dto.ItemDTO;
 import com.lengbingkeji.api.dto.OrderDetailDTO;
+import com.lengbingkeji.api.feignclient.fallback.ItemClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -21,8 +22,11 @@ import java.util.List;
  * @Create 2024/1/13 10:20
  * @Version 1.0
  */
-@FeignClient("LBKJ-ITEM-SERVICE")
-//@FeignClient(value = "LBKJ-ITEM-SERVICE", configuration = DefaultFeignConfig.class)
+//@FeignClient("LBKJ-ITEM-SERVICE")
+////@FeignClient(value = "LBKJ-ITEM-SERVICE", configuration = DefaultFeignConfig.class)
+@FeignClient(value = "LBKJ-ITEM-SERVICE",
+        configuration = DefaultFeignConfig.class,
+        fallbackFactory = ItemClientFallback.class)
 public interface ItemClient {
     @GetMapping("/items")
     List<ItemDTO> queryItemByIds(@RequestParam("ids") Collection<Long> ids);
