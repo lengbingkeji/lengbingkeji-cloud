@@ -7,6 +7,11 @@ spring:
       transport:
         dashboard: localhost:8090
       http-method-specify: true   #开启请求方式前缀
+
+feign:
+  sentinel:
+    enabled: true    #开启feign对sentinel的支持
+
 #spring:
 #  #application:
 #    #name: lbkj-cart-service
