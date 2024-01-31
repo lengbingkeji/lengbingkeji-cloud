@@ -7,6 +7,15 @@ spring:
       transport:
         dashboard: localhost:8090
       http-method-specify: true   #开启请求方式前缀
+      datasource:    #配置sentinel持久化中配置文件拉取的数据库信息
+        lbkjds: #配置文件的数据源名称（随意命名）
+          nacos:
+            server-addr: localhost:8848
+            data-id: degrade.json
+            group-id: DEFAULT_GROUP
+            data-type: json
+            rule-type: degrade  #降级
+
 
 feign:
   sentinel:
