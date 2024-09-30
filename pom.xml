@@ -18,6 +18,7 @@
         <module>lbkj-trade-service</module>
         <module>lbkj-pay-service</module>
         <module>lbkj-gateway</module>
+        <module>lbkj-selenium-firefox</module>
     </modules>
 
     <parent>
