@@ -11,12 +11,14 @@
     <name>LENGBINGKEJI CLOUD ${project.version}</name>
     <modules>
         <module>lbkj-common</module>
-        <module>lbkj-item-service</module>
-        <module>lbkj-cart-service</module>
-        <module>lbkj-api</module>
-        <module>lbkj-user-service</module>
-        <module>lbkj-trade-service</module>
-        <module>lbkj-pay-service</module>
+        <!--
+         <module>lbkj-item-service</module>
+         <module>lbkj-cart-service</module>
+         <module>lbkj-api</module>
+         <module>lbkj-user-service</module>
+         <module>lbkj-trade-service</module>
+         <module>lbkj-pay-service</module>
+        -->
         <module>lbkj-gateway</module>
     </modules>
 
